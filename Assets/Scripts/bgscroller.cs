@@ -17,7 +17,7 @@ public class bgscroller : MonoBehaviour
 
     void generateBGTile() {
     	GameObject baseTile = bgtiles[bgtiles.Count - 1];
-    	GameObject newtile = Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 4, baseTile.transform.position.y, 0), Quaternion.identity);
+		GameObject newtile = (GameObject) Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 4, baseTile.transform.position.y, 0), Quaternion.identity);
     	newtile.name = "bg";
     	if (Random.Range(0, 2) == 0) {
 	    	newtile.GetComponent<SpriteRenderer>().sprite = bg0; 
@@ -35,7 +35,7 @@ public class bgscroller : MonoBehaviour
 
     void generateGroundTile() {
     	GameObject baseTile = groundtiles[groundtiles.Count - 1];
-    	GameObject newtile = Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 1, baseTile.transform.position.y, 0), Quaternion.identity);
+		GameObject newtile = (GameObject) Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 1, baseTile.transform.position.y, 0), Quaternion.identity);
     	newtile.name = "ground";
     	if (Random.Range(0, 2) == 0) {
 	    	newtile.GetComponent<SpriteRenderer>().sprite = ground0; 
