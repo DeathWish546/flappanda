@@ -212,7 +212,6 @@ GameObject:
   m_Component:
   - component: {fileID: 538478071}
   - component: {fileID: 538478070}
-  - component: {fileID: 538478072}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -273,23 +272,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &538478072
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 538478069}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 11.97, y: 8}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -14.01, y: 0}
-  - {x: 2, y: 0}
 --- !u!1 &775156726
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +893,7 @@ GameObject:
   - component: {fileID: 1938840859}
   - component: {fileID: 1938840860}
   - component: {fileID: 1938840861}
+  - component: {fileID: 1938840862}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1119,6 +1102,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!68 &1938840862
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938840852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -9.1686, y: 8.065969}
+  - {x: 7.916985, y: 8.065969}
 --- !u!1 &2059210544
 GameObject:
   m_ObjectHideFlags: 0
