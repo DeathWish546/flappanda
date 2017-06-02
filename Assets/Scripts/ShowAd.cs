@@ -88,8 +88,8 @@ public class ShowAd : MonoBehaviour {
 		string creative = getResponse(www.text);
 		imageTexture = new WWW(creative);
 		yield return imageTexture;
-		Renderer renderer = GetComponent<Renderer>();
-		renderer.material.mainTexture = imageTexture.texture;
+		SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+		renderer.sprite = Sprite.Create(imageTexture.texture, new Rect(0, 0, imageTexture.texture.width, imageTexture.texture.height), new Vector2(0.5f, 0.5f));
 		responseReceived = true;
 
 	}

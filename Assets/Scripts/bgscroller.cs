@@ -11,31 +11,42 @@ public class bgscroller : MonoBehaviour
     public GameObject groundTile;
     public Sprite ground0;
     public Sprite ground1;
+    public GameObject background0;
+    public GameObject background1;
 
     private List<GameObject> bgtiles;
     private List<GameObject> groundtiles;
 
     void generateBGTile() {
-    	GameObject baseTile = bgtiles[bgtiles.Count - 1];
-		GameObject newtile = (GameObject) Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 4, baseTile.transform.position.y, 0), Quaternion.identity);
-    	newtile.name = "bg";
+    	GameObject baseTile = bgtiles[bgtiles.Count - 1];    	
     	if (Random.Range(0, 2) == 0) {
+    		GameObject newtile = Instantiate(background0, new Vector3(baseTile.transform.position.x + 4, baseTile.transform.position.y, 0), Quaternion.identity);
+    		newtile.name = "bg";
 	    	newtile.GetComponent<SpriteRenderer>().sprite = bg0; 
+	    	bgtiles.Add(newtile);
     	} else {
+    		GameObject newtile = Instantiate(background1, new Vector3(baseTile.transform.position.x + 4, baseTile.transform.position.y, 0), Quaternion.identity);
     		newtile.GetComponent<SpriteRenderer>().sprite = bg1;
+    		newtile.name = "bg";
     		GameObject ad = new GameObject("cool ad");
     		ad.AddComponent<ShowAd>();
     		ad.GetComponent<ShowAd>().player = ad;
-    		ad.AddComponent<MeshRenderer>();
+    		ad.AddComponent<SpriteRenderer>();
+    		// ad.AddComponent<MeshFilter>();
+    		// ad.GetComponent<MeshFilter>().mesh = mesh;
     		ad.transform.parent = newtile.transform;
+    		ad.transform.localPosition = new Vector3(.12f,7.19f,-1f);
+    		ad.transform.localScale = new Vector3(0.8875f, 1.803f,1f);
+    		// ad.transform.rotation = new Quaternion(0, 180, 0 ,0);
+    		bgtiles.Add(newtile);
     	}
     	
-    	bgtiles.Add(newtile);
+    	
     }
 
     void generateGroundTile() {
     	GameObject baseTile = groundtiles[groundtiles.Count - 1];
-		GameObject newtile = (GameObject) Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 1, baseTile.transform.position.y, 0), Quaternion.identity);
+    	GameObject newtile = Instantiate(baseTile, new Vector3(baseTile.transform.position.x + 1, baseTile.transform.position.y, 0), Quaternion.identity);
     	newtile.name = "ground";
     	if (Random.Range(0, 2) == 0) {
 	    	newtile.GetComponent<SpriteRenderer>().sprite = ground0; 
