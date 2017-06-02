@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Bird : MonoBehaviour {
 	public float speed = 2;
@@ -20,7 +22,7 @@ public class Bird : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Application.LoadLevel(Application.loadedLevel);
+		SceneManager.LoadScene ("Menu");
 	}
 
 }

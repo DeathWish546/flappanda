@@ -7,3 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Menu.unity
+    guid: 85ecc23484b74164fa0790d48e363a2b
+  - enabled: 1
+    path: Assets/flappanda.unity
+    guid: b6e032e4288ac47b2b80f4853b680ed9

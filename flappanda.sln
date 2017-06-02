@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{235AE7EB-5D71-3D08-3CD6-A39F3E21AB2A}") = "flappanda", "Assembly-CSharp.csproj", "{1736F56C-9FED-72D2-10DF-B4BA0ED54CAB}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flappanda", "Assembly-CSharp.csproj", "{1736F56C-9FED-72D2-10DF-B4BA0ED54CAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
